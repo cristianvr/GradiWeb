@@ -27,7 +27,7 @@ window.onload = ()=> {
     var weatherThreeDayIcon = document.getElementById("weatherThreeDayIcon");
     var weatherThreeDayMinMax = document.getElementById("weatherThreeDayMinMax");
 
-    $.get("http://api.openweathermap.org/data/2.5/forecast",{q:"bogota",cnt:4,appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
+    $.get("https://api.openweathermap.org/data/2.5/forecast",{q:"bogota",cnt:4,appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
         (data)=>{
             // console.log(data);
             let today = data.list[0];
@@ -38,12 +38,12 @@ window.onload = ()=> {
             iconBog = today.weather[0].icon;
             tempBog = today.main.temp -273,1;
 
-            iconBogWeather.src = "http://openweathermap.org/img/wn/"+iconBog+".png";
+            iconBogWeather.src = "https://openweathermap.org/img/wn/"+iconBog+".png";
             tempBogContainer.innerHTML = tempBog.toFixed(0) + "<sup>°C</sup>";
 
             //tomorrow card
             iconTomorrow = tomorrow.weather[0].icon;
-            weatherTomorrowIcon.src = "http://openweathermap.org/img/wn/"+iconTomorrow+".png";
+            weatherTomorrowIcon.src = "https://openweathermap.org/img/wn/"+iconTomorrow+".png";
             document.getElementById("dayNameTomorrow").innerHTML = dayTomorrow + "<span style='color: #c9c7c7;'>"+tomorrow.weather[0].main+"</span>";
             var min_temp = tomorrow.main.temp_min -273.1;
             var max_temp = tomorrow.main.temp_max -273.1;
@@ -51,7 +51,7 @@ window.onload = ()=> {
             
             //Two day card
             iconTwoDay = inTwoDays.weather[0].icon;
-            weatherTwoDayIcon.src = "http://openweathermap.org/img/wn/"+iconTwoDay+".png";
+            weatherTwoDayIcon.src = "https://openweathermap.org/img/wn/"+iconTwoDay+".png";
             document.getElementById("dayNameTwoDay").innerHTML = twoDay + "<span style='color: #c9c7c7;'>"+inTwoDays.weather[0].main+"</span>";
             var min_temp = inTwoDays.main.temp_min -273.1;
             var max_temp = inTwoDays.main.temp_max -273.1;
@@ -59,7 +59,7 @@ window.onload = ()=> {
             
             //Three Day card
             iconThreeDay = inThreeDays.weather[0].icon;
-            weatherThreeDayIcon.src = "http://openweathermap.org/img/wn/"+iconThreeDay+".png";
+            weatherThreeDayIcon.src = "https://openweathermap.org/img/wn/"+iconThreeDay+".png";
             document.getElementById("dayNameThreeDay").innerHTML = ThreeDay + "<span style='color: #c9c7c7;'>"+inThreeDays.weather[0].main+"</span>";
             var min_temp = inThreeDays.main.temp_min -273.1;
             var max_temp = inThreeDays.main.temp_max -273.1;
@@ -68,7 +68,7 @@ window.onload = ()=> {
         }
     );
 
-    $.get("http://api.openweathermap.org/data/2.5/weather",{q:"paris",appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
+    $.get("https://api.openweathermap.org/data/2.5/weather",{q:"paris",appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
         (data)=>{
                        
             let iconParis = data.weather[0].icon;
@@ -83,7 +83,7 @@ window.onload = ()=> {
             let cardinalItemData = document.getElementById("cardinalItem");
             let velocityItemData = document.getElementById("velocityItem");
 
-            iconParisWeather.src = "http://openweathermap.org/img/wn/"+iconParis+".png";
+            iconParisWeather.src = "https://openweathermap.org/img/wn/"+iconParis+".png";
             parisTemp.innerHTML = tempParis.toFixed(0)+"<sup>°C</sup>"; 
             humidityItemData.innerHTML = "Humidity "+humidity+"%";
             cardinalItemData.innerHTML = getCardinalPointName(cardinalDegress);
@@ -92,7 +92,7 @@ window.onload = ()=> {
         }
     );
 
-    $.get("http://api.openweathermap.org/data/2.5/weather",{q:"lyon",appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
+    $.get("https://api.openweathermap.org/data/2.5/weather",{q:"lyon",appid:"a45cca1adc0d9f42c76c8f045ef02a47" },
         (data)=>{
                        
             let iconLyon = data.weather[0].icon;
@@ -107,7 +107,7 @@ window.onload = ()=> {
             let cardinalItemData = document.getElementById("cardinalItemLyon");
             let velocityItemData = document.getElementById("velocityItemLyon");
 
-            iconLyonWeather.src = "http://openweathermap.org/img/wn/"+iconLyon+".png";
+            iconLyonWeather.src = "https://openweathermap.org/img/wn/"+iconLyon+".png";
             LyonTemp.innerHTML = tempLyon.toFixed(0)+"<sup>°C</sup>"; 
             humidityItemData.innerHTML = "Humidity "+humidity+"%";
             cardinalItemData.innerHTML = getCardinalPointName(cardinalDegress);
