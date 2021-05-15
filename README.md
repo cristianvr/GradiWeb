@@ -14,4 +14,4 @@ La extension PHP del archivo index se usa solo para el despliegue en heroku (no 
 
 Dudas, suregencias, contacto: cristian@cvrelectronica.com - 3015468124
 
-Espero haber cumplido con las espectativas, gracias por la oportunidad.
+Espero haber cumplido con las expectativas, gracias por la oportunidad.
